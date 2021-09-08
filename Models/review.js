@@ -3,19 +3,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-    Username : {
+    username : {
       type: String,
       required: true,
     },
-    Rating: {
+    rating: {
       type: String,
       required: true, 
     },
-    Content: {
+    content: {
       type: String, 
       required: true, 
     },
-    User: {
+    user: {
       type: mongoose.Types.ObjectId,
       ref: "User",
     }

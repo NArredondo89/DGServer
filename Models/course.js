@@ -13,7 +13,7 @@ const courseSchema = new Schema({
     location: {
       type: String,
     },
-    LocationUrl : {
+    locationUrl : {
       type:  String,
     },
     holes: {

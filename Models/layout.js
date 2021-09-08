@@ -18,7 +18,15 @@ const layoutSchema = new Schema({
     totalFeet : {
       type: Number,
     },
-})
+    hole: {
+      type:mongoose.Types.ObjectId,
+      ref:"Hole",
+    }
+  },
+  {
+    timestamps:true
+  }
+)
 
 const Layout = mongoose.model("Layout", layoutSchema);
 
