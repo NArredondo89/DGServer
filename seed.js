@@ -1,6 +1,8 @@
 // const { Course } = require('./Models')
 // const { Layout } = require('./Models')
 // const { Hole } = require('./Models')
+// const { User } = require('./Models')
+// const { Review } = require('./Models')
 
 
 
@@ -225,3 +227,47 @@
 // });
 
 
+// User.deleteMany({}, function (error,deletedUser){
+//     if(error){
+//       return console.log(error);
+//     }
+//     User.insertMany(
+//       [
+//     {
+//       username : "nicholishous",
+//       password: "password",
+//       email: "Nicka721@gmail.com",
+
+//     }], 
+//       function (error, createdUSer){
+//         if(error){
+//           return console.log(error);
+//         }
+//         console.log("===== User seed Complete =====");
+//         console.log(createdUser);
+//       }
+//     );
+//     });
+
+
+
+  //   Review.deleteMany({}, function (error,deletedReview){
+  //     if(error){
+  //       return console.log(error);
+  //     }
+  //     Review.insertMany(
+  //       [
+  //     {
+  //     rating: 5, 
+  //     content:"This was my favorite course", 
+  //     User: "6138f501e427e4ad96af9da5",
+  //   }], 
+  //   function (error, createdReview){
+  //     if(error){
+  //       return console.log(error);
+  //     }
+  //     console.log("===== Review seed Complete =====");
+  //     console.log(createdReview);
+  //   }
+  // );
+  // });
