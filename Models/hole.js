@@ -4,28 +4,24 @@ const Schema = mongoose.Schema;
 
 const holeSchema = new Schema({
     hole : {
-      type: Integer,
+      type: Number,
       required: true,
     },
     par: {
-      type:integer,
+      type:Number,
       required: true, 
     },
     feet: {
-      type: String, 
-      required: true, 
+      type: Number, 
     },
     mandos : {
-      type: Integer,
-      required: true,
+      type: String,
     },
     outOfBounds: {
-      type:integer,
-      required: true, 
+      type:String,
     },
     hazzards: {
       type: String, 
-      required: true, 
     }
 })
 

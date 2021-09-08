@@ -17,13 +17,13 @@ const courseSchema = new Schema({
       type:  String,
     },
     holes: {
-      type: Integer, 
+      type: Number, 
     },
     services: {
       type: String, 
     },
-    estableished : {
-      type:  Integer,
+    established : {
+      type:  Number,
     },
     property: {
       type: String, 

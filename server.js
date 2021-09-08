@@ -2,13 +2,15 @@
 const express = require("express");
 const cors = require("cors");
 const routes = require("./Routes")
+// routes.connect()
 
 const port = process.env.PORT || 4000;
 const app = express();
 
 ////Middlewear/////
-// app.use(cors());
-
+app.use(cors());
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 ///middleware - API routes
 // app.use("/api/v1/course", routes.course);
 // app.use("/api/v1/auth", routes.auth);

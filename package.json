@@ -20,7 +20,7 @@
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev" : "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +44,9 @@
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
     "@babel/preset-flow": "^7.14.5"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "author": "Nicholas",
+  "license": "ISC"
 }

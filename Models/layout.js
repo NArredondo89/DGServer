@@ -8,15 +8,15 @@ const layoutSchema = new Schema({
       required: true,
     },
     totalHoles: {
-      type:Integer,
+      type:Number,
       required: true, 
     },
     totalPar: {
-      type: String, 
+      type: Number, 
       required: true, 
     },
     totalFeet : {
-      type: Integer,
+      type: Number,
     },
 })
 

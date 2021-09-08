@@ -1,18 +1,20 @@
 const mongoose = require("mongoose");
 
-const connectionString =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/gamelib";
+const connectionString = "mongodb://localhost:27017/discgolf";
+
 const configOptions = {
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-  useFindAndModify: false,
+  // useCreateIndex: true,
+  useUnifiedTopology: true
+  // useFindAndModify: false
 };
 
-mongoose
-  .connect(connectionString, configOptions)
-  .then(() => console.log("MongoDB successfully connected..."))
-  .catch((err) => console.log(`MongoDB connection error: ${err}`));
+mongoose.connect(connectionString, configOptions)
+  // .then(() => console.log("MongoDB successfully connected..."))
+  // .catch((err) => console.log(`MongoDB connection error: ${err}`));
+
+  mongoose.set('returnOriginal', false )
+  mongoose.connection.once('open', () => console.log("connected to mongodb"))
 
   module.exports = {
     Course: require('./course'),
@@ -20,7 +22,7 @@ mongoose
     Hole: require('./hole'),
     Throw: require('./throw'),
     User: require('./user'),
-    Review: require('./review'),
+    Review: require('./review')
   }
 
-  
+ 
