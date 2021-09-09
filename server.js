@@ -2,7 +2,8 @@
 const express = require("express");
 const cors = require("cors");
 const routes = require("./Routes")
-const { index } = require("./Models")
+// const db = require("./Controllers")
+
 
 
 const port = process.env.PORT || 4000;
@@ -17,6 +18,7 @@ app.use(express.json());
 
 ///middleware - API routes
 // app.use("/api/v1/games", routes.course);
+
 app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/user", routes.user);
 

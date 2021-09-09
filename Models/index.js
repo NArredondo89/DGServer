@@ -4,8 +4,8 @@ require("dotenv").config();
 
 
 
-const connectionString =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/discgolf";
+const connectionString = process.env.MONGODB_URI
+// || "mongodb://localhost:27017/discgolf";
 
 
 const configOptions = {
@@ -19,11 +19,11 @@ mongoose.connect(connectionString, configOptions)
 
 
 
-  module.exports = {
-    Course: require('./course'),
-    Layout: require('./layout'),
-    Hole: require('./hole'),
-    Throw: require('./throw'),
-    User: require('./user'),
-    Review: require('./review')
-  }
+module.exports = {
+  Course: require('./course'),
+  Layout: require('./layout'),
+  Hole: require('./hole'),
+  Throw: require('./throw'),
+  User: require('./user'),
+  Review: require('./review')
+}

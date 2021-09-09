@@ -5,9 +5,12 @@ const jwt = require("jsonwebtoken");
 
 //Register///////
 const register = async (req, res) => {
+
+  console.log("route hit")
   try {
-    res.send("Works")
+
     console.log(req.body)
+
     const foundUser = await db.User.findOne({ email: req.body.email });
 
     if (foundUser) 
@@ -18,8 +21,6 @@ const register = async (req, res) => {
       
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(req.body.password, salt);
-
-    // //////trouble child/////
     const createdUser = await db.User.create({...req.body, password: hash });
 
       return res
@@ -37,9 +38,7 @@ const register = async (req, res) => {
 //////Login///////
 const login = async (req, res) => {
   try {
-    const foundUser = await db.User.findOne({ email: req.body.email }).select(
-      "+password"
-    );
+    const foundUser = await db.User.findOne({ email: req.body.email }).select("+password");
 
     if (!foundUser) {
       return res
