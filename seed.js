@@ -235,11 +235,11 @@
 //       [
 //     {
 //       username : "nicholishous",
-//       password: "password",
 //       email: "Nicka721@gmail.com",
+//       password: "password",
 
 //     }], 
-//       function (error, createdUSer){
+//       function (error, createdUser){
 //         if(error){
 //           return console.log(error);
 //         }
@@ -251,23 +251,24 @@
 
 
 
-  //   Review.deleteMany({}, function (error,deletedReview){
-  //     if(error){
-  //       return console.log(error);
-  //     }
-  //     Review.insertMany(
-  //       [
-  //     {
-  //     rating: 5, 
-  //     content:"This was my favorite course", 
-  //     User: "6138f501e427e4ad96af9da5",
-  //   }], 
-  //   function (error, createdReview){
-  //     if(error){
-  //       return console.log(error);
-  //     }
-  //     console.log("===== Review seed Complete =====");
-  //     console.log(createdReview);
-  //   }
-  // );
-  // });
+//   Review.deleteMany({}, function (error,deletedReview){
+//     if(error){
+//       return console.log(error);
+//     }
+//     Review.insertMany(
+//       [
+//     {
+//     rating: 5, 
+//     content:"This was my favorite course", 
+//     User: "6138f501e427e4ad96af9da5",
+//   }], 
+//   function (error, createdReview){
+//     if(error){
+//       return console.log(error);
+//     }
+//     console.log("===== Review seed Complete =====");
+//     console.log(createdReview);
+//   }
+// );
+// });
+

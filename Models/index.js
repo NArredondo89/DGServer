@@ -1,7 +1,12 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 
-const connectionString = "mongodb://localhost:27017/discgolf";
+
+
+const connectionString =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/discgolf";
+
 
 const configOptions = {
   useNewUrlParser: true,

@@ -1,11 +1,8 @@
 const router = require("express").Router();
 const ctrl = require("../Controllers");
 
-// routes
-router.get("/:id", ctrl.user.show);
-router.get("/:id", ctrl.layout.edit);
-router.put("/:id", ctrl.layout.update);
+const authRequired = require("../Middlewear/authRequired");
 
+router.get("/", authRequired, ctrl.user.show);
 
-// exports
 module.exports = router;
