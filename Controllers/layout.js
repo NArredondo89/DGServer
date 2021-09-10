@@ -1,12 +1,36 @@
-const Layout = require("../Models");
+const db = require("../Models");
 
 
 // ////this is a index route for Course information////
-// const show = (req,res) => {
-//   res.send("this is my Show Route for layout infomation")
-// }
+const index = (req, res) => {
+  db.Layout.find({}, (err, foundLayout) => {
+    if (err) {
+      console.log("Error in layout#show:", err);
 
-// /////this is a edit route for course information//// 
+      return res.send("Incomplete layout#show controller function");
+    }
+
+    res.status(200).json({
+      layout: foundLayout,
+    });
+  });
+}
+
+const showHole = (req, res) => {
+  db.layout.findById(req.params.id, (err, foundHole) => {
+    if (err) {
+      console.log("Error in games#show:", err);
+
+      return res.send("Incomplete Holes#show controller function");
+    }
+
+    res.status(200).json({
+      hole: foundHole,
+    });
+  });
+}
+
+///this is a edit route for course information//// 
 // const edit = (req,res) => {
 //   res.send("this is my edit Route for layout infomation")
 // }
@@ -17,8 +41,8 @@ const Layout = require("../Models");
 // }
 
 
-// module.exports = {
-//   show,
-//   edit,
-//   update,
-// }
+module.exports = {
+  index,
+  showHole,
+
+}

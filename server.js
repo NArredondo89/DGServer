@@ -6,6 +6,7 @@ const routes = require("./Routes")
 
 
 
+
 const port = process.env.PORT || 4000;
 const app = express();
 
@@ -18,6 +19,8 @@ app.use(express.json());
 
 // /middleware - API routes
 app.use("/api/v1/course", routes.course);
+app.use("/api/v1/layout", routes.layout);
+// app.use("/api/v1/layout", routes.showHole)
 app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/user", routes.user);
 
