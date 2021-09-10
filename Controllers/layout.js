@@ -16,8 +16,8 @@ const index = (req, res) => {
   });
 }
 
-const showHole = (req, res) => {
-  db.layout.findById(req.params.id, (err, foundHole) => {
+const show = (req, res) => {
+  db.Hole.findById(req.params.id, (err, foundHole) => {
     if (err) {
       console.log("Error in games#show:", err);
 
@@ -43,6 +43,6 @@ const showHole = (req, res) => {
 
 module.exports = {
   index,
-  showHole,
+  show,
 
 }
