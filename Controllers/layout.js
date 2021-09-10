@@ -51,34 +51,34 @@ const createReview = (req, res) => {
 
 
 
+const updateLayout = (req, res) => {
+
+  const updatedLayout = {$set: req.body}
+  db.Layout.updateOne(
+    {id: req.params.id},
+    updatedLayout
+  ).then(
+    (updatedLayout, err) => {
+      if (err) {
+        console.log("Error in Course#update:", err);
+
+        return res.send("Incomplete Course#update controller function");
+      } else {
+        return res.status(200).json({
+          updatedLayout,
+        });
+      }
+    }
+  )
+};
 
 
-// const updateLayout = (req, res) => {
-//   console.log(req.body)
-//   const updatedLayout = {$set: req.body}
-//   db.Layout.updateOne(
-//     {id: req.params.id},
-//     updatedLayout
-//   ).then(
-//     (updatedLayout, err) => {
-//       if (err) {
-//         console.log("Error in Course#update:", err);
-
-//         return res.send("Incomplete Course#update controller function");
-//       } else {
-//         return res.status(200).json({
-//           updatedLayout,
-//         });
-//       }
-//     }
-//   )
-// };
 
 
 
 module.exports = {
   layoutShow,
   holeShow,
-  createReview
-  // updateLayout
+  createReview,
+  updateLayout
 }
