@@ -16,6 +16,8 @@ const index = (req, res) => {
   });
 }
 
+
+/////this is a show route for the holes on the layout page/////////
 const show = (req, res) => {
   db.Hole.findById(req.params.id, (err, foundHole) => {
     if (err) {
@@ -44,5 +46,4 @@ const show = (req, res) => {
 module.exports = {
   index,
   show,
-
 }
