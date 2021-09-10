@@ -17,6 +17,8 @@ const index = (req, res) => {
   });
 };
 
+
+
 const show = (req, res) => {
   db.Course.findById(req.params.id, (err, foundCourse) => {
     if (err) {
@@ -31,8 +33,9 @@ const show = (req, res) => {
   });
 };
 
-/////this is an update route for course information//////
 
+
+/////this is an update route for course information//////
 const update = (req, res) => {
   const updatedCourse = {$set: req.body}
   db.Course.updateOne(

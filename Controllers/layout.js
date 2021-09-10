@@ -2,7 +2,7 @@ const db = require("../Models");
 
 
 // ////this is a index route for Course information////
-const index = (req, res) => {
+const layoutShow = (req, res) => {
   db.Layout.find({}, (err, foundLayout) => {
     if (err) {
       console.log("Error in layout#show:", err);
@@ -18,10 +18,10 @@ const index = (req, res) => {
 
 
 /////this is a show route for the holes on the layout page/////////
-const show = (req, res) => {
+const holeShow = (req, res) => {
   db.Hole.findById(req.params.id, (err, foundHole) => {
     if (err) {
-      console.log("Error in games#show:", err);
+      console.log("Error in hole#show:", err);
 
       return res.send("Incomplete Holes#show controller function");
     }
@@ -32,18 +32,53 @@ const show = (req, res) => {
   });
 }
 
-///this is a edit route for course information//// 
-// const edit = (req,res) => {
-//   res.send("this is my edit Route for layout infomation")
-// }
 
-// /////this is an update route for course information//////
-// const update = (req,res) => {
-//   res.send("this is my update Route for layout infomation")
-// }
+const createReview = (req, res) => {
+  console.log(req.body)
+  db.Review.create(req.body,
+    (err, createReview) => {
+      if (err) {
+        console.log('Error in Review#create:', err);
+
+        return res.send("Incomplete Review#create controller function");
+      }
+
+      res.status(201).json({
+        createdReview: createReview
+      });
+    });
+};
+
+
+
+
+
+// const updateLayout = (req, res) => {
+//   console.log(req.body)
+//   const updatedLayout = {$set: req.body}
+//   db.Layout.updateOne(
+//     {id: req.params.id},
+//     updatedLayout
+//   ).then(
+//     (updatedLayout, err) => {
+//       if (err) {
+//         console.log("Error in Course#update:", err);
+
+//         return res.send("Incomplete Course#update controller function");
+//       } else {
+//         return res.status(200).json({
+//           updatedLayout,
+//         });
+//       }
+//     }
+//   )
+// };
+
 
 
 module.exports = {
-  index,
-  show,
+  layoutShow,
+  holeShow,
+  createReview
+  // updateLayout
 }
