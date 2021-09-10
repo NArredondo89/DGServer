@@ -26,7 +26,7 @@ const register = async (req, res) => {
       return res
       .status(201)
       .json({ status: 201, message: "success", createdUser });
-  } catch (error) {
+  } catch (error) {np
     return res.status(500).json({
       status: 500,
       message: "Something went wrong. Please try again",
@@ -35,10 +35,11 @@ const register = async (req, res) => {
 };
 
 
-//////Login///////
 const login = async (req, res) => {
   try {
-    const foundUser = await db.User.findOne({ email: req.body.email }).select("+password");
+    const foundUser = await db.User.findOne({ email: req.body.email }).select(
+      "+password"
+    );
 
     if (!foundUser) {
       return res
@@ -52,7 +53,7 @@ const login = async (req, res) => {
       //TODO create a json web token and send response
       // jwt.sign(payload, secret key for signing, config object)
       const token = jwt.sign({ _id: foundUser._id }, "password", {
-        expiresIn: "30d",
+        expiresIn: "1d",
       });
 
       return res.status(200).json({
@@ -75,8 +76,10 @@ const login = async (req, res) => {
   }
 };
 
+
 module.exports = {
   register,
   login,
+
 };
 

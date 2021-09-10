@@ -1,14 +1,15 @@
+
 const create = (req,res) => {
-  db.Course.create({}, (err, createdCourse) => {
-    req.body,
+  db.Review.create({}, (err, createdReview) => {
+    req.body;
     if (err) {
-      console.log("Error in Course#index:", err);
+      console.log("Error in create#index:", err);
 
       return res.send("Incomplete Course#index controller function");
     }
 
     res.status(200).json({
-      Course: createdCourse,
+      Course: createdReview,
     });
   });
 };

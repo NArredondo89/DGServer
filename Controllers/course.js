@@ -3,6 +3,7 @@ const db = require("../Models");
 
 ////this is a index route for Course information////
 const index = (req, res) => {
+  consolelog(req.param)
   db.Course.find({}, (err, foundCourse) => {
     if (err) {
       console.log("Error in Course#index:", err);
