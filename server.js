@@ -16,9 +16,8 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 
 
-///middleware - API routes
-// app.use("/api/v1/games", routes.course);
-
+// /middleware - API routes
+app.use("/api/v1/course", routes.course);
 app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/user", routes.user);
 
