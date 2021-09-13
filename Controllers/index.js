@@ -4,5 +4,5 @@ module.exports = {
   user: require("./user"),
   layout: require("./layout"),
   hole: require('./layout'),
-  throw: require("./throw")
+  review: require('./review')
 };

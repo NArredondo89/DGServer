@@ -71,7 +71,7 @@ const holeShow = (req, res) => {
 
 //////////////////////This route Creates a reviews on the course layout page////////////////////
 const createReview = (req, res) => {
-  db.Review.create(req.body,
+  db.Review.Create(req.body,
     (err, createReview) => {
       if (err) {
         console.log('Error in Review#create:', err);

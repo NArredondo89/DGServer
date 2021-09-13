@@ -19,7 +19,7 @@ const layoutSchema = new Schema({
       type: Number,
     },
     hole: {
-      type:mongoose.Types.ObjectId,
+      type:[mongoose.Types.ObjectId],
       ref:"Hole",
     }
   },
@@ -31,3 +31,4 @@ const layoutSchema = new Schema({
 const Layout = mongoose.model("Layout", layoutSchema);
 
 module.exports = Layout;
+

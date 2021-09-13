@@ -19,6 +19,7 @@ const index = (req, res) => {
 
 
 
+
 const show = (req, res) => {
   db.Course.findById(req.params.id, (err, foundCourse) => {
     if (err) {
@@ -55,6 +56,7 @@ const update = (req, res) => {
     }
   )
 };
+
 
 
 

@@ -39,6 +39,10 @@ const courseSchema = new Schema({
     },
     weeklyAnnouncements: {
       type: String, 
+    },
+    layout: {
+      type:mongoose.Types.ObjectId,
+      ref:"Layout",
     }
 })
 

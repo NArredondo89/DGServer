@@ -14,6 +14,14 @@ const reviewSchema = new Schema({
     user: {
       type: mongoose.Types.ObjectId,
       ref: "User",
+    },
+    course: {
+      type: mongoose.Types.ObjectId,
+      ref:"Course",
+    },
+    holes:{
+      type: mongoose.Types.ObjectId,
+      ref:"Hole"
     }
   },
   {
