@@ -1,6 +1,6 @@
 const db = require("../Models");
 
-const holeShow = (req, res) => {
+const HoleShow = (req, res) => {
   db.Hole.findById(req.params.id, (err, foundHole) => {
     if (err) {
       console.log("Error in hole#show:", err);
@@ -14,4 +14,6 @@ const holeShow = (req, res) => {
   });
 }
 
-module.exports = holeShow
+module.exports = {
+  HoleShow
+}

@@ -18,11 +18,11 @@ app.use(express.json());
 
 
 // /middleware - API routes
+app.use("/api/v1/hole", routes.hole);
 app.use("/api/v1/course", routes.course);
 app.use("/api/v1/layout", routes.layout);
 app.use("/api/v1/auth", routes.auth);
 app.use("/api/v1/user", routes.user);
-app.use("/api/v1/hole", routes.hole)
 
 // connection
 app.listen(port, () => console.log(`Server is running on port ${port}`));
