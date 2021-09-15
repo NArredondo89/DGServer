@@ -55,20 +55,6 @@ const updateLayout = (req, res) => {
   )
 };
 
-/////this is a show route for the holes on the layout page/////////
-const holeShow = (req, res) => {
-  db.Hole.findById(req.params.id, (err, foundHole) => {
-    if (err) {
-      console.log("Error in hole#show:", err);
-
-      return res.send("Incomplete Holes#show controller function");
-    }
-
-    res.status(200).json({
-      hole: foundHole,
-    });
-  });
-}
 
 //////////////////////This route Creates a reviews on the course layout page////////////////////
 const createReview = (req, res) => {
@@ -90,29 +76,13 @@ const createReview = (req, res) => {
 
 
 
-/////This route handles finding the throws pertainting to the hole that we are on///////////////////
-const throwShow = (req, res) => {
-  db.Layout.findById(req.params, (err, foundthrow) => {
-    console.log(req.body)
-    if (err) {
-      console.log("Error in the #throwShow:", err);
 
-      return res.send("Incomplete #throwShow controller function");
-    }
-
-    res.status(200).json({
-      layout: foundthrow,
-    });
-  });
-}
 
 
 
 module.exports = {
   layoutShow,
   layoutEdit,
-  holeShow,
   createReview,
   updateLayout,
-  throwShow
 }
