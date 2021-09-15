@@ -7,6 +7,9 @@ const holeSchema = new Schema({
       type: Number,
       required: true,
     },
+    image: {
+      type:String,
+    },
     par: {
       type:Number,
       required: true, 

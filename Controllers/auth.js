@@ -26,7 +26,7 @@ const register = async (req, res) => {
       return res
       .status(201)
       .json({ status: 201, message: "success", createdUser });
-  } catch (error) {np
+  } catch (error) {
     return res.status(500).json({
       status: 500,
       message: "Something went wrong. Please try again",
@@ -55,7 +55,7 @@ const login = async (req, res) => {
       const token = jwt.sign({ _id: foundUser._id }, "password", {
         expiresIn: "1d",
       });
-
+      console.log(token)
       return res.status(200).json({
         status: 200,
         message: "success",

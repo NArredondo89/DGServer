@@ -25,7 +25,7 @@
 //   availability: "Year Round - 7am to 9pm",
 //   announcements: "Double's tournament on Monday and Thursday night at 6:00pm",
 //   weeklyAnnouncements: "Saturday Handicap weekly (8am-4pm) $5 Open for everyone to play - Road and Beyond OB-grass playes hazard 6, 7, 15, 16 - 9 plays as an island(logsOB) - mando_L 8, 13, 17 ",
-//   layout:"613ebd661dd86ea69d54ab32"
+//   layout:"6140f68533dfc1696b6a8396"
 //   }],
 //   function (error, createdCourses){
 //     if(error){
@@ -40,46 +40,46 @@
 
 
 
-// Layout.deleteMany({}, function (error,deletedLayout){
-//     if(error){
-//       return console.log(error);
-//     }
-//     Layout.insertMany(
-//       [
-//     {
-//       tite : "White flags/Orange flags",
-//       totalHoles: 18,
-//       totalPar: 54,
-//       totalFeet: 5249,
-//       hole: ["613ebbf72ceefd2d1f09dfdc",
-//         "613ebbf72ceefd2d1f09dfdd", 
-//         "613ebbf72ceefd2d1f09dfde", 
-//         "613ebbf72ceefd2d1f09dfdf", 
-//         "613ebbf72ceefd2d1f09dfe0", 
-//         "613ebbf72ceefd2d1f09dfe1", 
-//         "613ebbf72ceefd2d1f09dfe2", 
-//         "613ebbf72ceefd2d1f09dfe3",  
-//         "613ebbf72ceefd2d1f09dfe4", 
-//         "613ebbf72ceefd2d1f09dfe5", 
-//         "613ebbf72ceefd2d1f09dfe6", 
-//         "613ebbf72ceefd2d1f09dfe7", 
-//         "613ebbf72ceefd2d1f09dfe8", 
-//         "613ebbf72ceefd2d1f09dfe9",
-//         "613ebbf72ceefd2d1f09dfea",
-//         "613ebbf72ceefd2d1f09dfeb",
-//         "613ebbf72ceefd2d1f09dfec",
-//         "613ebbf72ceefd2d1f09dfed"]
+Layout.deleteMany({}, function (error,deletedLayout){
+    if(error){
+      return console.log(error);
+    }
+    Layout.insertMany(
+      [
+    {
+      tite : "White flags/Orange flags",
+      totalHoles: 18,
+      totalPar: 54,
+      totalFeet: 5249,
+      hole: ["613ebbf72ceefd2d1f09df0d",
+        "6140f3a6b5cb30d0b5a37e0e", 
+        "6140f3a6b5cb30d0b5a37e0f", 
+        "6140f3a6b5cb30d0b5a37e10", 
+        "6140f3a6b5cb30d0b5a37e11", 
+        "6140f3a6b5cb30d0b5a37e12", 
+        "6140f3a6b5cb30d0b5a37e13", 
+        "6140f3a6b5cb30d0b5a37e14",  
+        "6140f3a6b5cb30d0b5a37e15", 
+        "6140f3a6b5cb30d0b5a37e16", 
+        "6140f3a6b5cb30d0b5a37e17", 
+        "6140f3a6b5cb30d0b5a37e18", 
+        "6140f3a6b5cb30d0b5a37e19", 
+        "6140f3a6b5cb30d0b5a37e1a",
+        "6140f3a6b5cb30d0b5a37e1b",
+        "6140f3a6b5cb30d0b5a37e1c",
+        "6140f3a6b5cb30d0b5a37e1d",
+        "6140f3a6b5cb30d0b5a37e1e"]
       
-//     }], 
-//       function (error, createdLayout){
-//         if(error){
-//           return console.log(error);
-//         }
-//         console.log("===== Layout seed Complete =====");
-//         console.log(createdLayout);
-//       }
-//     );
-//     });
+    }], 
+      function (error, createdLayout){
+        if(error){
+          return console.log(error);
+        }
+        console.log("===== Layout seed Complete =====");
+        console.log(createdLayout);
+      }
+    );
+    });
 
 
 
@@ -277,9 +277,9 @@
 //       [
 //     {
 //     rating: 5, 
-//     content:"This is the best course!!", 
-//     user: "613ebbf72ceefd2d1f09dfef",
-//     course:"613ec11cd7919cad6b361b7b"
+//     content:"I hate Mando to the Left!!", 
+//     user: "6140f6f9466d1cc886f5b7b8",
+//     hole: "6140f3a6b5cb30d0b5a37e0d"
 
 //   }], 
 //   function (error, createdReview){

@@ -12,6 +12,7 @@ const layoutShow = (req, res) => {
 
     res.status(200).json({
       layout: foundLayout,
+      
     });
   });
 }

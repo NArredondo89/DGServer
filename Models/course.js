@@ -41,7 +41,7 @@ const courseSchema = new Schema({
       type: String, 
     },
     layout: {
-      type:mongoose.Types.ObjectId,
+      type:[mongoose.Types.ObjectId],
       ref:"Layout",
     }
 })
