@@ -3,7 +3,7 @@ const db = require("../Models");
 
 ////this is a index route for Course information////
 const layoutShow = (req, res) => {
-  db.Layout.find({}, (err, foundLayout) => {
+  db.Layout.find({}).populate("hole").exec((err, foundLayout) => {
     if (err) {
       console.log("Error in layout#show:", err);
 
