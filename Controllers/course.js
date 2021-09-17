@@ -58,12 +58,30 @@ const update = (req, res) => {
 };
 
 
+const destroy = (req, res) => {
+  db.Course.find({}, (err, deletedReview) => {
+    if (err) {
+      console.log('Error in games#destroy:', err)
+
+      return res.send("Incomplete games#destroy controller function");
+    }
+
+    res.status(200).json(
+      {
+        deletedReview
+      }
+    );
+  });
+};
+
+
 
 
 module.exports = {
   index,
   show,
   update,
+  destroy,
 }
 
 

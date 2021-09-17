@@ -1,8 +1,8 @@
 // const { Course } = require('./Models')
-// const { Layout } = require('./Models')
-// const { Hole } = require('./Models')
-// const { User } = require('./Models')
-// const { Review } = require('./Models')
+// // const { Layout } = require('./Models')
+// // const { Hole } = require('./Models')
+// // const { User } = require('./Models')
+// // const { Review } = require('./Models')
 
 
 
@@ -40,46 +40,46 @@
 
 
 
-Layout.deleteMany({}, function (error,deletedLayout){
-    if(error){
-      return console.log(error);
-    }
-    Layout.insertMany(
-      [
-    {
-      tite : "White flags/Orange flags",
-      totalHoles: 18,
-      totalPar: 54,
-      totalFeet: 5249,
-      hole: ["613ebbf72ceefd2d1f09df0d",
-        "6140f3a6b5cb30d0b5a37e0e", 
-        "6140f3a6b5cb30d0b5a37e0f", 
-        "6140f3a6b5cb30d0b5a37e10", 
-        "6140f3a6b5cb30d0b5a37e11", 
-        "6140f3a6b5cb30d0b5a37e12", 
-        "6140f3a6b5cb30d0b5a37e13", 
-        "6140f3a6b5cb30d0b5a37e14",  
-        "6140f3a6b5cb30d0b5a37e15", 
-        "6140f3a6b5cb30d0b5a37e16", 
-        "6140f3a6b5cb30d0b5a37e17", 
-        "6140f3a6b5cb30d0b5a37e18", 
-        "6140f3a6b5cb30d0b5a37e19", 
-        "6140f3a6b5cb30d0b5a37e1a",
-        "6140f3a6b5cb30d0b5a37e1b",
-        "6140f3a6b5cb30d0b5a37e1c",
-        "6140f3a6b5cb30d0b5a37e1d",
-        "6140f3a6b5cb30d0b5a37e1e"]
+// Layout.deleteMany({}, function (error,deletedLayout){
+//     if(error){
+//       return console.log(error);
+//     }
+//     Layout.insertMany(
+//       [
+//     {
+//       tite : "White flags/Orange flags",
+//       totalHoles: 18,
+//       totalPar: 54,
+//       totalFeet: 5249,
+//       hole: ["613ebbf72ceefd2d1f09df0d",
+//         "6140f3a6b5cb30d0b5a37e0e", 
+//         "6140f3a6b5cb30d0b5a37e0f", 
+//         "6140f3a6b5cb30d0b5a37e10", 
+//         "6140f3a6b5cb30d0b5a37e11", 
+//         "6140f3a6b5cb30d0b5a37e12", 
+//         "6140f3a6b5cb30d0b5a37e13", 
+//         "6140f3a6b5cb30d0b5a37e14",  
+//         "6140f3a6b5cb30d0b5a37e15", 
+//         "6140f3a6b5cb30d0b5a37e16", 
+//         "6140f3a6b5cb30d0b5a37e17", 
+//         "6140f3a6b5cb30d0b5a37e18", 
+//         "6140f3a6b5cb30d0b5a37e19", 
+//         "6140f3a6b5cb30d0b5a37e1a",
+//         "6140f3a6b5cb30d0b5a37e1b",
+//         "6140f3a6b5cb30d0b5a37e1c",
+//         "6140f3a6b5cb30d0b5a37e1d",
+//         "6140f3a6b5cb30d0b5a37e1e"]
       
-    }], 
-      function (error, createdLayout){
-        if(error){
-          return console.log(error);
-        }
-        console.log("===== Layout seed Complete =====");
-        console.log(createdLayout);
-      }
-    );
-    });
+//     }], 
+//       function (error, createdLayout){
+//         if(error){
+//           return console.log(error);
+//         }
+//         console.log("===== Layout seed Complete =====");
+//         console.log(createdLayout);
+//       }
+//     );
+//     });
 
 
 
