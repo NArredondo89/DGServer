@@ -7,7 +7,7 @@ const routes = require("./Routes")
 
 
 
-const port = process.env.PORT || 4000;
+app.listen(process.env.PORT || 4000);
 const app = express();
 
 
