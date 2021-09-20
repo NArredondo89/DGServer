@@ -22,8 +22,8 @@
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "dev": "nodemon server.js",
-    "postinstall": "./node_modules/bower/bin/bower install && npm run build"
+    "dev": "nodemon server.js"
+    
   },
   "eslintConfig": {
     "extends": [
