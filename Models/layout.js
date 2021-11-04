@@ -1,34 +1,43 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const layoutSchema = new Schema({
-    tite : {
+const layoutSchema = new Schema(
+  {
+    title: {
       type: String,
       required: true,
     },
     totalHoles: {
-      type:Number,
-      required: true, 
+      type: String,
+      required: true,
     },
     totalPar: {
-      type: Number, 
-      required: true, 
+      type: String,
+      required: true,
     },
-    totalFeet : {
-      type: Number,
+    totalFeet: {
+      type: String,
+    },
+    layoutInformation: {
+      type: String,
+    },
+    hazzard: {
+      type: String,
+    },
+    outOfBounds: {
+      type: String,
     },
     hole: {
-      type:[mongoose.Types.ObjectId],
-      ref:"Hole",
-    }
+      type: [mongoose.Types.ObjectId],
+      ref: "Hole",
+    },
   },
   {
-    timestamps:true
+    timestamps: true,
   }
-)
+);
 
 const Layout = mongoose.model("Layout", layoutSchema);
 
 module.exports = Layout;
-

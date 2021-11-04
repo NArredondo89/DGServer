@@ -1,9 +1,7 @@
 const db = require("../Models");
 
-
 ////this is a index route for Course information////
 const index = (req, res) => {
-
   db.Course.find({}, (err, foundCourse) => {
     if (err) {
       console.log("Error in Course#index:", err);
@@ -16,9 +14,6 @@ const index = (req, res) => {
     });
   });
 };
-
-
-
 
 const show = (req, res) => {
   db.Course.findById(req.params.id, (err, foundCourse) => {
@@ -34,15 +29,10 @@ const show = (req, res) => {
   });
 };
 
-
-
 /////this is an update route for course information//////
 const update = (req, res) => {
-  const updatedCourse = {$set: req.body}
-  db.Course.updateOne(
-    {id: req.params.id},
-    updatedCourse
-  ).then(
+  const updatedCourse = { $set: req.body };
+  db.Course.updateOne({ id: req.params.id }, updatedCourse).then(
     (updatedCourse, err) => {
       if (err) {
         console.log("Error in Course#update:", err);
@@ -54,34 +44,26 @@ const update = (req, res) => {
         });
       }
     }
-  )
+  );
 };
-
 
 const destroy = (req, res) => {
   db.Course.find({}, (err, deletedReview) => {
     if (err) {
-      console.log('Error in games#destroy:', err)
+      console.log("Error in games#destroy:", err);
 
       return res.send("Incomplete games#destroy controller function");
     }
 
-    res.status(200).json(
-      {
-        deletedReview
-      }
-    );
+    res.status(200).json({
+      deletedReview,
+    });
   });
 };
-
-
-
 
 module.exports = {
   index,
   show,
   update,
   destroy,
-}
-
-
+};

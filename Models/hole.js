@@ -1,29 +1,37 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
 const holeSchema = new Schema({
-    hole : {
-      type: Number,
-      required: true,
-    },
-    par: {
-      type:Number,
-      required: true, 
-    },
-    feet: {
-      type: Number, 
-    },
-    mandos : {
-      type: String,
-    },
-    outOfBounds: {
-      type:String,
-    },
-    hazzards: {
-      type: String, 
-    }
-})
+  picture: {
+    type: String,
+    required: true,
+  },
+  number: {
+    type: String,
+    required: true,
+  },
+  par: {
+    type: String,
+    required: true,
+  },
+  feet: {
+    type: String,
+  },
+  mandatory: {
+    type: String,
+  },
+  outOfBounds: {
+    type: String,
+  },
+  hazzards: {
+    type: String,
+  },
+  Route: {
+    type: [mongoose.Types.ObjectId],
+    ref: "Route",
+  },
+});
 
 const Hole = mongoose.model("Hole", holeSchema);
 

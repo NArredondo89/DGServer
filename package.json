@@ -23,7 +23,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "dev": "nodemon server.js"
-    
   },
   "eslintConfig": {
     "extends": [

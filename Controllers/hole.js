@@ -1,6 +1,5 @@
 const db = require("../Models");
 
-
 const index = (req, res) => {
   db.Hole.find({}, (err, foundHole) => {
     if (err) {
@@ -8,7 +7,6 @@ const index = (req, res) => {
 
       return res.send("Incomplete Hole#index controller function");
     }
-
     res.status(200).json({
       hole: foundHole,
     });
@@ -27,8 +25,7 @@ const HoleShow = (req, res) => {
       hole: foundHole,
     });
   });
-}
-
+};
 
 const HoleEdit = (req, res) => {
   db.Hole.findById(req.params.id, (err, foundHole) => {
@@ -42,10 +39,10 @@ const HoleEdit = (req, res) => {
       hole: foundHole,
     });
   });
-}
+};
 
 module.exports = {
   HoleShow,
   index,
-  HoleEdit
-}
+  HoleEdit,
+};
