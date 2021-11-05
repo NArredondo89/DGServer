@@ -18,7 +18,7 @@ const userSchema = new Schema({
     required: true,
     select: false,
   },
-  Avatar: {
+  avatar: {
     type: String,
   },
 });

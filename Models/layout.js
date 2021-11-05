@@ -18,15 +18,16 @@ const layoutSchema = new Schema(
     },
     totalFeet: {
       type: String,
+      required: true,
     },
     layoutInformation: {
       type: String,
     },
     hazzard: {
-      type: String,
+      type: [String],
     },
     outOfBounds: {
-      type: String,
+      type: [String],
     },
     hole: {
       type: [mongoose.Types.ObjectId],

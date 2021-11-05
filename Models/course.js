@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const courseSchema = new Schema({
   name: {
     type: String,
-    required: true,
   },
   condition: {
     type: String,
@@ -14,9 +13,6 @@ const courseSchema = new Schema({
     type: String,
   },
   location: {
-    type: String,
-  },
-  locationImage: {
     type: String,
   },
   holes: {

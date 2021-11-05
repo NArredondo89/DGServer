@@ -15,11 +15,11 @@ mongoose
 
 module.exports = {
   Course: require("./course"),
-  Layout: require("./layout"),
+  Event: require("./event"),
   Hole: require("./hole"),
+  Layout: require("./layout"),
+  PlayDate: require("./playDate"),
+  Review: require("./route"),
   Route: require("./route"),
   User: require("./user"),
-  Review: require("./route.js"),
-  PlayDate: require("./playDate"),
-  Events: require("./events"),
 };

@@ -1,15 +1,16 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
+const reviewSchema = new Schema(
+  {
     rating: {
       type: Number,
-      required: true, 
+      required: true,
     },
-    content: {
-      type: String, 
-      required: true, 
+    comment: {
+      type: String,
+      required: true,
     },
     user: {
       type: mongoose.Types.ObjectId,
@@ -17,15 +18,19 @@ const reviewSchema = new Schema({
     },
     course: {
       type: mongoose.Types.ObjectId,
-      ref:"Course",
+      ref: "Course",
     },
-    holes:{
+    holes: {
       type: mongoose.Types.ObjectId,
-      ref:"Hole"
-    }
+      ref: "Hole",
+    },
+    playDate: {
+      type: mongoose.Types.ObjectId,
+      ref: "PlayDate",
+    },
   },
   {
-    timesptamps:true
+    timesptamps: true,
   }
 );
 

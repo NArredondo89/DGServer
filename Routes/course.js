@@ -5,8 +5,8 @@ const ctrl = require("../Controllers");
 router.get("/", ctrl.course.index);
 router.get("/:id", ctrl.course.show);
 router.put("/:id", ctrl.course.update);
-router.post("/:id", ctrl.review.create);
 router.delete("/:id", ctrl.course.destroy);
+// router.post("/:id", ctrl.review.create);
 
 // exports
 module.exports = router;

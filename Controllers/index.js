@@ -3,6 +3,7 @@ module.exports = {
   auth: require("./auth"),
   user: require("./user"),
   layout: require("./layout"),
-  hole: require('./hole'),
-  review: require('./review')
+  hole: require("./hole"),
+  review: require("./review"),
+  // events: require("./events"),
 };

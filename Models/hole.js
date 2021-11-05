@@ -5,7 +5,6 @@ const Schema = mongoose.Schema;
 const holeSchema = new Schema({
   picture: {
     type: String,
-    required: true,
   },
   number: {
     type: String,
@@ -27,7 +26,7 @@ const holeSchema = new Schema({
   hazzards: {
     type: String,
   },
-  Route: {
+  route: {
     type: [mongoose.Types.ObjectId],
     ref: "Route",
   },
