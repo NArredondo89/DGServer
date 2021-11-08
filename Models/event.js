@@ -7,6 +7,9 @@ const eventSchema = new Schema({
     type: String,
     required: true,
   },
+  smallDescription: {
+    type: String,
+  },
   contact: {
     type: String,
   },

@@ -11,13 +11,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // /middleware - API routes
-app.use("/api/v1/hole", routes.hole);
+////Course and park Routes////
 app.use("/api/v1/course", routes.course);
 app.use("/api/v1/layout", routes.layout);
+app.use("/api/v1/hole", routes.hole);
+app.use("/api/v1/route", routes.route);
+
+////Events and Review Routes///////
+app.use("/api/v1/event", routes.event);
+app.use("/api/v1/review", routes.review);
+
 // app.use("/api/v1/auth", routes.auth);
 // app.use("/api/v1/user", routes.user);
-
-// connection
-// app.listen(port, () => console.log(`Server is running on port ${port}`));
 
 app.listen(process.env.PORT || 4000);

@@ -19,7 +19,7 @@ module.exports = {
   Hole: require("./hole"),
   Layout: require("./layout"),
   PlayDate: require("./playDate"),
-  Review: require("./route"),
+  Review: require("./review"),
   Route: require("./route"),
   User: require("./user"),
 };

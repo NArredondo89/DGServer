@@ -8,7 +8,7 @@
 
 // const { PlayDate } = require("./Models");
 
-// const { Review } = require("./Models");
+const { Review } = require("./Models");
 
 // const { Route } = require("./Models");
 
@@ -302,28 +302,28 @@
 //     );
 //     });
 
-//   Review.deleteMany({}, function (error,deletedReview){
-//     if(error){
-//       return console.log(error);
-//     }
-//     Review.insertMany(
-//       [
-//     {
-//     rating: 5,
-//     content:"I hate Mando to the Left!!",
-//     user: "6140f6f9466d1cc886f5b7b8",
-//     hole: "6140f3a6b5cb30d0b5a37e0d"
-
-//   }],
-//   function (error, createdReview){
-//     if(error){
-//       return console.log(error);
-//     }
-//     console.log("===== Review seed Complete =====");
-//     console.log(createdReview);
-//   }
-// );
-// });
+Review.deleteMany({}, function (error, deletedReview) {
+  if (error) {
+    return console.log(error);
+  }
+  Review.insertMany(
+    [
+      {
+        rating: 3.5,
+        comment:
+          "This Course is Awesome but I'm going to give it a 3.5 star raiting anyways ",
+        course: "61855f2c12dc6d555ed78dca",
+      },
+    ],
+    function (error, createdReview) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Review seed Complete =====");
+      console.log(createdReview);
+    }
+  );
+});
 
 // Event.deleteMany({}, function (error, deletedUser) {
 //   if (error) {
@@ -360,7 +360,9 @@
 //     [
 //       {
 //         title: "Chabot Park Weekly",
-//         contact: "I hate Mando to the Left!!",
+//         contact: "Jordan Goldberg",
+//         smallDescription:
+//           "Welcome to the Chabot Park Weekly! This tournament is handicapped and will be open Saturday and Sunday! A Players first two rounds will establish their handicap. ",
 //         startTime: "8:00am - 5:00pm",
 //         dayOfWeek: "Saturday - Sunday",
 //         startFormat: "Flex Start",

@@ -5,5 +5,6 @@ module.exports = {
   layout: require("./layout"),
   hole: require("./hole"),
   review: require("./review"),
-  // events: require("./events"),
+  event: require("./event"),
+  route: require("./route"),
 };
