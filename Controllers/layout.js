@@ -19,17 +19,19 @@ const layoutShow = (req, res) => {
 
 // ////this is an edit route for Course information////
 const layoutEdit = (req, res) => {
-  db.Layout.find({}, (err, editedLayout) => {
-    if (err) {
-      console.log("Error in layout#show:", err);
+  db.Layout.find({})
+    .populate("hole")
+    .exec((err, editedLayout) => {
+      if (err) {
+        console.log("Error in layout#show:", err);
 
-      return res.send("Incomplete layout#show controller function");
-    }
+        return res.send("Incomplete layout#show controller function");
+      }
 
-    res.status(200).json({
-      layout: editedLayout,
+      res.status(200).json({
+        layout: editedLayout,
+      });
     });
-  });
 };
 
 //////////////////////This route updates the course layout////////////////////////////////
