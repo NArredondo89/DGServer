@@ -7,10 +7,16 @@ const eventSchema = new Schema({
     type: String,
     required: true,
   },
+  eventPhoto: {
+    type: String,
+  },
   smallDescription: {
     type: String,
   },
   contact: {
+    type: String,
+  },
+  label: {
     type: String,
   },
   starTime: {
@@ -26,7 +32,7 @@ const eventSchema = new Schema({
     type: String,
   },
   description: {
-    type: String,
+    type: [String],
   },
   admin: {
     type: [String],
