@@ -26,6 +26,9 @@ const holeSchema = new Schema({
   hazzards: {
     type: String,
   },
+  dropZone: {
+    type: String,
+  },
   route: {
     type: [mongoose.Types.ObjectId],
     ref: "Route",
