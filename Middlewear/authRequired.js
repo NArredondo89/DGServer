@@ -1,28 +1,26 @@
-// // jwt middle ware for verification
-// const jwt = require("jsonwebtoken");
+// jwt middle ware for verification
+const jwt = require("jsonwebtoken");
 
-// module.exports = async (req, res, next) => {
-//   try {
-//     // grab token
-//     const bearerHeader = req.headers.authorization;
+module.exports = async (req, res, next) => {
+  try {
+    // grab token
+    const bearerHeader = req.headers.authorization;
 
-//     // if no token
-//     if (typeof bearerHeader === "undefined") {
-//       return res.sendStatus(403);
-//     }
+    // if no token
+    if (typeof bearerHeader === "undefined") {
+      return res.sendStatus(403);
+    }
 
-//     // if there is a token
-//     const token = bearerHeader.split(" ")[1];
+    // if there is a token
+    const token = bearerHeader.split(" ")[1];
+    const payload = await jwt.verify(token, "supersecretwaffles");
+    req.userId = payload._id;
 
-//     const payload = await jwt.verify(token, "password");
-
-//     req.userId = payload._id;
-
-//     next();
-//   } catch (err) {
-//     console.log(err);
-//     return res
-//       .status(500)
-//       .json({ status: 500, message: "Internal Server Error" });
-//   }
-// };
+    next();
+  } catch (err) {
+    console.log(err);
+    return res
+      .status(500)
+      .json({ status: 500, message: "Internal Server Error" });
+  }
+};

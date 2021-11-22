@@ -1,4 +1,3 @@
-  
 const { User } = require("../Models");
 
 const show = async (req, res, next) => {
@@ -16,8 +15,6 @@ const show = async (req, res, next) => {
       .json({ status: 500, message: "Internal Server Error" });
   }
 };
-
-
 
 module.exports = {
   show,

@@ -1,92 +1,91 @@
-// const { Course } = require("./Models");
+const { Course } = require("./Models");
 
-// const { Event } = require("./Models");
+const { Event } = require("./Models");
 
 const { Hole } = require("./Models");
 
-// const { Layout } = require("./Models");
+const { Layout } = require("./Models");
 
-// const { PlayDate } = require("./Models");
+const { PlayDate } = require("./Models");
 
-// const { Review } = require("./Models");
+const { Review } = require("./Models");
 
-// const { Route } = require("./Models");
+const { Route } = require("./Models");
 
-// const { User } = require("./Models");
+const { User } = require("./Models");
 
-// Course.deleteMany({}, function (error, deletedcourses) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Course.insertMany(
-//     [
-//       {
-//         name: "Chabot Park",
-//         condition: "Good Condition",
-//         parkPhoto: "",
-//         location: "San Leandro, Ca",
-//         holes: 18,
-//         services: "Dog Friendly - Cat Friendly",
-//         established: 1988,
-//         property: "Mixed Use, Public Park",
-//         tees: "Dirt",
-//         availability: "Year Round - 7am to 9pm",
-//         targets: "Old School Baskets",
-//         layout: "61855e3ffad37089b7fdfbc0",
-//       },
-//     ],
-//     function (error, createdCourses) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Courses seed Complete =====");
-//       console.log(createdCourses);
-//     }
-//   );
-// });
+Course.deleteMany({}, function (error, deletedcourses) {
+  if (error) {
+    return console.log(error);
+  }
+  Course.insertMany(
+    [
+      {
+        name: "Chabot Park",
+        condition: "Good Condition",
+        parkPhoto: "",
+        location: "San Leandro, Ca",
+        holes: 18,
+        services: "Dog Friendly - Cat Friendly",
+        established: 1988,
+        property: "Mixed Use, Public Park",
+        tees: "Dirt",
+        availability: "Year Round - 7am to 9pm",
+        targets: "Old School Baskets",
+        layout: "61944d9294e421a31db55b0e",
+      },
+    ],
+    function (error, createdCourses) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Courses seed Complete =====");
+      console.log(createdCourses);
+    }
+  );
+});
 
-// Layout.deleteMany({}, function (error, deletedLayout) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Layout.insertMany(
-//     [
-//       {
-//         title: "White flags/Orange flags",
-//         totalHoles: 18,
-//         totalPar: 54,
-//         totalFeet: 5249,
-//         hole: [
-//           "61855bdcd1e64ed169c6e01e",
-//           "61855bdcd1e64ed169c6e01f",
-//           "61855bdcd1e64ed169c6e020",
-//           "61855bdcd1e64ed169c6e021",
-//           "61855bdcd1e64ed169c6e022",
-//           "61855bdcd1e64ed169c6e023",
-//           "61855bdcd1e64ed169c6e024",
-//           "61855bdcd1e64ed169c6e025",
-//           "61855bdcd1e64ed169c6e026",
-//           "61855bdcd1e64ed169c6e027",
-//           "61855bdcd1e64ed169c6e028",
-//           "61855bdcd1e64ed169c6e029",
-//           "61855bdcd1e64ed169c6e02a",
-//           "61855bdcd1e64ed169c6e02b",
-//           "61855bdcd1e64ed169c6e02c",
-//           "61855bdcd1e64ed169c6e02d",
-//           "61855bdcd1e64ed169c6e02e",
-//           "61855bdcd1e64ed169c6e02f",
-//         ],
-//       },
-//     ],
-//     function (error, createdLayout) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Layout seed Complete =====");
-//       console.log(createdLayout);
-//     }
-//   );
-// });
+Layout.deleteMany({}, function (error, deletedLayout) {
+  if (error) {
+    return console.log(error);
+  }
+  Layout.insertMany(
+    [
+      {
+        title: "White flags/Orange flags",
+        totalHoles: 18,
+        totalPar: 54,
+        totalFeet: 5249,
+        hole: [
+          "6191c2ba0e7f8954570239af",
+          "6191c2ba0e7f8954570239b0",
+          "6191c2ba0e7f8954570239b1",
+          "6191c2ba0e7f8954570239b2",
+          "6191c2ba0e7f8954570239b3",
+          "6191c2ba0e7f8954570239b4",
+          "6191c2ba0e7f8954570239b5",
+          "6191c2ba0e7f8954570239b6",
+          "6191c2ba0e7f8954570239b7",
+          "6191c2ba0e7f8954570239b8",
+          "6191c2ba0e7f8954570239b9",
+          "6191c2ba0e7f8954570239ba",
+          "6191c2ba0e7f8954570239bb",
+          "6191c2ba0e7f8954570239bc",
+          "6191c2ba0e7f8954570239bd",
+          "6191c2ba0e7f8954570239be",
+          "6191c2ba0e7f8954570239bf",
+        ],
+      },
+    ],
+    function (error, createdLayout) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Layout seed Complete =====");
+      console.log(createdLayout);
+    }
+  );
+});
 
 Hole.deleteMany({}, function (error, deletedLayout) {
   if (error) {
@@ -289,209 +288,209 @@ Hole.deleteMany({}, function (error, deletedLayout) {
   );
 });
 
-// Route.deleteMany({}, function (error, deletedRoute) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Route.insertMany(
-//     [
-//       {
-//         title: "forehand",
-//         content: "This is a Forehand Route",
-//         video: "URL",
-//       },
-//       {
-//         title: "backhand",
-//         content: "This is a Backhand Route",
-//         video: "URL",
-//       },
-//     ],
-//     function (error, createdUser) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Route seed Complete =====");
-//       console.log(createdRoute);
-//     }
-//   );
-// });
+Route.deleteMany({}, function (error, deletedRoute) {
+  if (error) {
+    return console.log(error);
+  }
+  Route.insertMany(
+    [
+      {
+        title: "forehand",
+        content: "This is a Forehand Route",
+        video: "URL",
+      },
+      {
+        title: "backhand",
+        content: "This is a Backhand Route",
+        video: "URL",
+      },
+    ],
+    function (error, createdUser) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Route seed Complete =====");
+      console.log(createdRoute);
+    }
+  );
+});
 
-// User.deleteMany({}, function (error,deletedUser){
-//     if(error){
-//       return console.log(error);
-//     }
-//     User.insertMany(
-//       [
-//     {
-//       username : "Nicholas",
-//       email: "test@test.com",
-//       password: "test",
+User.deleteMany({}, function (error, deletedUser) {
+  if (error) {
+    return console.log(error);
+  }
+  User.insertMany(
+    [
+      {
+        username: "Nicholas",
+        email: "test@test.com",
+        password: "test",
+      },
+    ],
+    function (error, createdUser) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== User seed Complete =====");
+      console.log(createdUser);
+    }
+  );
+});
 
-//     }],
-//       function (error, createdUser){
-//         if(error){
-//           return console.log(error);
-//         }
-//         console.log("===== User seed Complete =====");
-//         console.log(createdUser);
-//       }
-//     );
-//     });
+Review.deleteMany({}, function (error, deletedReview) {
+  if (error) {
+    return console.log(error);
+  }
+  Review.insertMany(
+    [
+      {
+        rating: 3.5,
+        comment:
+          "This Course is Awesome but I'm going to give it a 3.5 star raiting anyways ",
+        course: "61855f2c12dc6d555ed78dca",
+      },
+    ],
+    function (error, createdReview) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Review seed Complete =====");
+      console.log(createdReview);
+    }
+  );
+});
 
-// Review.deleteMany({}, function (error, deletedReview) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Review.insertMany(
-//     [
-//       {
-//         rating: 3.5,
-//         comment:
-//           "This Course is Awesome but I'm going to give it a 3.5 star raiting anyways ",
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//     ],
-//     function (error, createdReview) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Review seed Complete =====");
-//       console.log(createdReview);
-//     }
-//   );
-// });
+Event.deleteMany({}, function (error, deletedUser) {
+  if (error) {
+    return console.log(error);
+  }
+  Event.insertMany(
+    [
+      {
+        title: "Chabot Park Weekly",
+        contact: "I hate Mando to the Left!!",
+        startTime: "8:00am - 5:00pm",
+        dayOfWeek: "Saturday - Sunday",
+        startFormat: "Flex Start",
+        playFormat: "Singles",
+        admin: ["Mikey Alvarez", "Jordan Goldberg"],
+        course: "61855f2c12dc6d555ed78dca",
+      },
+    ],
+    function (error, createdEvent) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Event seed Complete =====");
+      console.log(createdEvent);
+    }
+  );
+});
 
-// Event.deleteMany({}, function (error, deletedUser) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Event.insertMany(
-//     [
-//       {
-//         title: "Chabot Park Weekly",
-//         contact: "I hate Mando to the Left!!",
-//         startTime: "8:00am - 5:00pm",
-//         dayOfWeek: "Saturday - Sunday",
-//         startFormat: "Flex Start",
-//         playFormat: "Singles",
-//         admin: ["Mikey Alvarez", "Jordan Goldberg"],
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//     ],
-//     function (error, createdEvent) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Event seed Complete =====");
-//       console.log(createdEvent);
-//     }
-//   );
-// });
+Event.deleteMany({}, function (error, deletedEvent) {
+  if (error) {
+    return console.log(error);
+  }
+  Event.insertMany(
+    [
+      {
+        title: "Chabot Park Weekly",
+        contact: "Jordan Goldberg",
+        eventPhoto: "https://i.imgur.com/yq0ZHbk.jpg",
+        smallDescription:
+          "Welcome to the Chabot Park Weekly! This tournament is handicapped and will be open Saturday and Sunday! A Players first two rounds will establish their handicap. ",
+        startTime: "8:00am - 5:00pm",
+        dayOfWeek: "Saturday - Sunday",
+        startFormat: "Flex Start",
+        label: "Handicap Round",
+        playFormat: "Singles",
+        description: [
+          " 1. Please Check-in on UDisc Events- Please pay before you start your round Entry Fee to: @Jordan-Goldberg-20. Our goal is to protect everyone, by going paperless. Thanks to UDisc! You will be able to keep track of your scores and watch live scores.The Weekly entry fee is $5. $4 goes to the week's payout, and $1 goes to the Ace Pot. You must have an established handicap (2 previously recorded weeklies) to be eligible for payout. Players without a handicap can enter the ace pot but the cost is still $5.",
 
-// Event.deleteMany({}, function (error, deletedEvent) {
-//   if (error) {
-//     return console.log(error);
-//   }
-//   Event.insertMany(
-//     [
-//       {
-//         title: "Chabot Park Weekly",
-//         contact: "Jordan Goldberg",
-//         eventPhoto: "https://i.imgur.com/yq0ZHbk.jpg",
-//         smallDescription:
-//           "Welcome to the Chabot Park Weekly! This tournament is handicapped and will be open Saturday and Sunday! A Players first two rounds will establish their handicap. ",
-//         startTime: "8:00am - 5:00pm",
-//         dayOfWeek: "Saturday - Sunday",
-//         startFormat: "Flex Start",
-//         label: "Handicap Round",
-//         playFormat: "Singles",
-//         description: [
-//           " 1. Please Check-in on UDisc Events- Please pay before you start your round Entry Fee to: @Jordan-Goldberg-20. Our goal is to protect everyone, by going paperless. Thanks to UDisc! You will be able to keep track of your scores and watch live scores.The Weekly entry fee is $5. $4 goes to the week's payout, and $1 goes to the Ace Pot. You must have an established handicap (2 previously recorded weeklies) to be eligible for payout. Players without a handicap can enter the ace pot but the cost is still $5.",
+          "2. UDisc Check-in: https://www.udisc.com/. To play the weekly, YOU MUST HAVE A UDISC PROFILE. If you do not already have a UDisc account and do not want to download the app yourself, you can have a cardmate check you in with your First and Last names and email address. This process will create a profile for you. **USE THE SAME FIRST AND LAST NAME AS USED FOR PREVIOUS WEEKLIES. PROPER CAPITALIZATION PLEASE.** >>MAKE SURE YOUR UDISC APP IS UP TO DATE OR ELSE YOU WILL RUN INTO PROBLEMS!",
 
-//           "2. UDisc Check-in: https://www.udisc.com/. To play the weekly, YOU MUST HAVE A UDISC PROFILE. If you do not already have a UDisc account and do not want to download the app yourself, you can have a cardmate check you in with your First and Last names and email address. This process will create a profile for you. **USE THE SAME FIRST AND LAST NAME AS USED FOR PREVIOUS WEEKLIES. PROPER CAPITALIZATION PLEASE.** >>MAKE SURE YOUR UDISC APP IS UP TO DATE OR ELSE YOU WILL RUN INTO PROBLEMS!",
+          "3. Create a Scorecard: Find the the 'Chabot Park Saturday Weekly'  league on the 'Events' tab in UDisc. Tap 'Check-in'. When checking in, use the same first and last name that you've previously used in Chabot Park Saturday Weekly tournaments.Groups must have at least 3 players to a card, but not more than 4",
 
-//           "3. Create a Scorecard: Find the the 'Chabot Park Saturday Weekly'  league on the 'Events' tab in UDisc. Tap 'Check-in'. When checking in, use the same first and last name that you've previously used in Chabot Park Saturday Weekly tournaments.Groups must have at least 3 players to a card, but not more than 4",
+          "4. Please try to create groups of exactly 4 when possible. Follow all current rules of the course that are posted at Hole 1's teepad and throughout the course. **One and only one person in each group** needs to create the scorecard for the group. Once all players in a group are checked in, scorecards can be created using the Create Scorecard button. Once the scorecard is created for the group, anyone in the group can also keep score or follow along on their own phone. If a player needs to be added to or removed from the scorecard after it's been created, use the menu button in the top right corner of the scorecard and choose 'Add / Remove Player'. **Please note that all changes to scorecards are tracked**",
 
-//           "4. Please try to create groups of exactly 4 when possible. Follow all current rules of the course that are posted at Hole 1's teepad and throughout the course. **One and only one person in each group** needs to create the scorecard for the group. Once all players in a group are checked in, scorecards can be created using the Create Scorecard button. Once the scorecard is created for the group, anyone in the group can also keep score or follow along on their own phone. If a player needs to be added to or removed from the scorecard after it's been created, use the menu button in the top right corner of the scorecard and choose 'Add / Remove Player'. **Please note that all changes to scorecards are tracked**",
+          "5. Upon completion of your round, everyone in the group should double check their score. Once this is done, the person with the live scorecard should tap 'Finish Round' then 'Finalize' to submit your score to the TD(s).",
 
-//           "5. Upon completion of your round, everyone in the group should double check their score. Once this is done, the person with the live scorecard should tap 'Finish Round' then 'Finalize' to submit your score to the TD(s).",
-
-//           "6.Thank you for understanding the rules and doing your part to keep everyone safe. Good luck and have fun.",
-//         ],
-//         admin: ["Mikey Alvarez", "Jordan Goldberg"],
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//       {
-//         title: "Thursday Doubles",
-//         contact: "Mikey Alverez",
-//         eventPhoto: "https://i.imgur.com/SRwyBak.jpg",
-//         smallDescription:
-//           "All levels welcome! This will be a partner tournament.  ",
-//         startTime: "4:30pm",
-//         dayOfWeek: "Thursday",
-//         startFormat: "Flex Start",
-//         label: "Best Throw",
-//         playFormat: "Doubles",
-//         description: [
-//           "1. This will be a doubles tournament for all levels and abilites.",
-//           "2. Please Come 10 minutes early to be prepared for the flip.",
-//           "3. All players will flip a disk to pick random teams.",
-//           "4. Bring $5.",
-//           "5. All rules and Mandos will be determined at the start of the game.",
-//           "6. Have fun!",
-//         ],
-//         admin: ["Mikey Alvarez", "Jordan Goldberg"],
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//       {
-//         title: "Monday Night Singles",
-//         contact: "Mikey Alverez",
-//         eventPhoto: "https://i.imgur.com/qgFpi0B.jpg",
-//         smallDescription: "Test your ability in this Raw scoreing round!",
-//         startTime: "4:30pm",
-//         dayOfWeek: "Monday",
-//         startFormat: "Flex Start",
-//         label: "Raw Scores",
-//         playFormat: "Single",
-//         description: [
-//           "1. This will be a Singles Tournament for all levels and abilites.",
-//           "2. Please Come 10 minutes early to be prepared for the flip.",
-//           "3. All players will play their raw scores. No mulligans or re-throws",
-//           "5. All rules and Mandos will be determined at the start of the game.",
-//           "4. Bring $5.",
-//           "6. Have fun!",
-//         ],
-//         admin: ["Mikey Alvarez", "Jordan Goldberg"],
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//       {
-//         title: "Friday Dubs At Oyster Bay",
-//         contact: "",
-//         eventPhoto: "https://i.imgur.com/8OjBnZM.jpg",
-//         smallDescription: "Test Your Skills At the Newest Course Aurond!",
-//         startTime: "4:30pm",
-//         dayOfWeek: "Friday",
-//         startFormat: "Flex Start",
-//         label: "Best Throw",
-//         playFormat: "Doubles",
-//         description: [
-//           "1. This will be a doubles tournament for all levels and abilites.",
-//           "2. Please Come 10 minutes early to be prepared for the flip.",
-//           "3. All players will flip a disk to pick random teams.",
-//           "4. Bring $5.",
-//           "5. All rules and Mandos will be determined at the start of the game.",
-//           "6. Have fun!",
-//         ],
-//         admin: ["Mikey Alvarez", "Jordan Goldberg"],
-//         course: "61855f2c12dc6d555ed78dca",
-//       },
-//     ],
-//     function (error, createdEvent) {
-//       if (error) {
-//         return console.log(error);
-//       }
-//       console.log("===== Event seed Complete =====");
-//       console.log(createdEvent);
-//     }
-//   );
-// });
+          "6.Thank you for understanding the rules and doing your part to keep everyone safe. Good luck and have fun.",
+        ],
+        admin: ["Mikey Alvarez", "Jordan Goldberg"],
+        course: "61855f2c12dc6d555ed78dca",
+      },
+      {
+        title: "Thursday Doubles",
+        contact: "Mikey Alverez",
+        eventPhoto: "https://i.imgur.com/SRwyBak.jpg",
+        smallDescription:
+          "All levels welcome! This will be a partner tournament.  ",
+        startTime: "4:30pm",
+        dayOfWeek: "Thursday",
+        startFormat: "Flex Start",
+        label: "Best Throw",
+        playFormat: "Doubles",
+        description: [
+          "1. This will be a doubles tournament for all levels and abilites.",
+          "2. Please Come 10 minutes early to be prepared for the flip.",
+          "3. All players will flip a disk to pick random teams.",
+          "4. Bring $5.",
+          "5. All rules and Mandos will be determined at the start of the game.",
+          "6. Have fun!",
+        ],
+        admin: ["Mikey Alvarez", "Jordan Goldberg"],
+        course: "61855f2c12dc6d555ed78dca",
+      },
+      {
+        title: "Monday Night Singles",
+        contact: "Mikey Alverez",
+        eventPhoto: "https://i.imgur.com/qgFpi0B.jpg",
+        smallDescription: "Test your ability in this Raw scoreing round!",
+        startTime: "4:30pm",
+        dayOfWeek: "Monday",
+        startFormat: "Flex Start",
+        label: "Raw Scores",
+        playFormat: "Single",
+        description: [
+          "1. This will be a Singles Tournament for all levels and abilites.",
+          "2. Please Come 10 minutes early to be prepared for the flip.",
+          "3. All players will play their raw scores. No mulligans or re-throws",
+          "5. All rules and Mandos will be determined at the start of the game.",
+          "4. Bring $5.",
+          "6. Have fun!",
+        ],
+        admin: ["Mikey Alvarez", "Jordan Goldberg"],
+        course: "61855f2c12dc6d555ed78dca",
+      },
+      {
+        title: "Friday Dubs At Oyster Bay",
+        contact: "",
+        eventPhoto: "https://i.imgur.com/8OjBnZM.jpg",
+        smallDescription: "Test Your Skills At the Newest Course Aurond!",
+        startTime: "4:30pm",
+        dayOfWeek: "Friday",
+        startFormat: "Flex Start",
+        label: "Best Throw",
+        playFormat: "Doubles",
+        description: [
+          "1. This will be a doubles tournament for all levels and abilites.",
+          "2. Please Come 10 minutes early to be prepared for the flip.",
+          "3. All players will flip a disk to pick random teams.",
+          "4. Bring $5.",
+          "5. All rules and Mandos will be determined at the start of the game.",
+          "6. Have fun!",
+        ],
+        admin: ["Mikey Alvarez", "Jordan Goldberg"],
+        course: "61855f2c12dc6d555ed78dca",
+      },
+    ],
+    function (error, createdEvent) {
+      if (error) {
+        return console.log(error);
+      }
+      console.log("===== Event seed Complete =====");
+      console.log(createdEvent);
+    }
+  );
+});

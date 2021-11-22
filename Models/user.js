@@ -18,9 +18,13 @@ const userSchema = new Schema({
     required: true,
     select: false,
   },
-  avatar: {
-    type: String,
+  signup_date: {
+    type: Date,
+    default: Date.now,
   },
+  // avatar: {
+  //   type: String,
+  // },
 });
 
 userSchema.set("toJSON", {
