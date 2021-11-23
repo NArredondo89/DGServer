@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
 
-// /middleware - API routes
+/// API routes////////////
 ////Course and park Routes////
 app.use("/api/v1/course", routes.course);
 app.use("/api/v1/layout", routes.layout);
