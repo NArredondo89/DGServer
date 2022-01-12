@@ -186,7 +186,7 @@ Scrape The U-Disc Website and utilize their data.
 # Technologies
 Yarn\
 Node.js\
-Express\ 
+Express\
 MongoDB\ 
 React.js\
 Google-Maps-React\
