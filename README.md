@@ -184,9 +184,9 @@ or
 Scrape The U-Disc Website and utilize their data.
 
 # Technologies
-Yarn
-Node.js 
-Express 
-MongoDB 
-React.js
-Google-Maps-React
+Yarn\
+Node.js\
+Express\ 
+MongoDB\ 
+React.js\
+Google-Maps-React\
