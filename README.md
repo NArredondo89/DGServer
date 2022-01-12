@@ -193,11 +193,15 @@ Google-Maps-React\
 
 **WireFrames**
 
-[Imgur](https://i.imgur.com/ZTjjhsp.jpg)
-[Imgur](https://i.imgur.com/0pesm2v.jpg)
-[Imgur](https://i.imgur.com/w51XLM5.jpg)
+-[DG-HeroSection](https://i.imgur.com/ZTjjhsp.jpg)
 
-[Imgur](https://i.imgur.com/1hzxHmx.jpg)
+-[DG-CourseInformation](https://i.imgur.com/0pesm2v.jpg)
+
+-[DG-CourseReview](https://i.imgur.com/w51XLM5.jpg)
+
+-[DG-LayoutSection](https://i.imgur.com/1hzxHmx.jpg)
+
+-[DG-HoleSection](https://i.imgur.com/NaMztwH.jpg)
 
 
 
