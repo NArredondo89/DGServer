@@ -1,4 +1,4 @@
-### Disc Golf Website (MERN)
+# Disc Golf Website (MERN)
 
 ## Objective
 
@@ -8,7 +8,7 @@ Since disc golf is run by local leaders that put time and effort into their cour
 
 ## Types of Users
 
-# **Admin** 
+###### **Admin** 
 Create, Update, Delete Course information ,  
 Create Update Delete Layout information, 
 Create Update Delete Hole Information, 
@@ -17,20 +17,20 @@ Create Update Delete Announcements/ Events
 Delete Reviews 
 Delete Play Date Comments 
 
-# **Non-Members****
+###### **Non-Members****
 Non-members are users that do not have a U-disc account. They will be able to view all pages. They will not be able to interact with the comments section or the Play Date Section. 
 
-# **Members**
+###### **Members**
 Create Comments 
 Create Play Date Comment 
 
 Members will have the ability to view all pages. Since they are not the admin they will not have any Create, Update or Delete Functionality. They will be able to interact (Post) in the review section and Play Date Section on the home page.
 
-### Component/ Webpage Layout
+# Component/ Webpage Layout
 
 ## Home page - https://adoring-pasteur-eb67f4.netlify.app/
 
-## Navigation Bar
+###### Navigation Bar
 The Nab bar will provide a way for the user to interact with the website. It will hold 5 different titles that each do something different. The titles will be presented from left to right (top to bottom)
 
 U-Disc Logo - This will bring you back to the homepage if clicked, if you are on the home page it will bring you to the top of the page. 
@@ -43,17 +43,17 @@ Products - The products page is a prototype page that will connect disc venders 
 
 Login - If a user is already a member they will be able to login.
 
-## Hero Section
+# Hero Section
 The Hero section will contain a static picture background. This will be the initial view of the park. This section will also contain contents such as, Park Title, Park City Location and two buttons. 
 
 Sign-Up button - The left button will be a Sign up button that will link to a sign-up page. 
 
 View Trailer- This button will be linked to a trailer that will show a flying view of the course. Either the button will pull up a modal or it will render the video inside the hero section. Once the trailer is done or the user clicks off, the contents will re-appear in the section 
 
-## Park Information Section
+# Park Information Section
 This section will be split into two sections. The left side section will display the course information (below) while the other side will display the google maps API of the course location. The map will be a high level overview of the location. 
 
-Information- Left 
+## **Information**
 Course Name : Name 
 Course Condition : Good Condition, Moderate Condition, Bad Conditions 
 Park location: City 
@@ -67,38 +67,39 @@ Targets: Types of Baskets.
 Map View - Right Side
 Park Photo: Google Map API
 
-## Events And Announcements
+# Events And Announcements
 This section will allow the admin to display events and create announcements. Each event will have its own Section, the section on the homepage will be a call for action. If the user selects on the event it will pop up a modal that will display more information about that specific event. Since the events do not have sign ups they will not need any more functionality than a display feature. 
 
-## **Home page**
-Photo - Hopefully a photo of people in prior events
-Event Title - Includes day (Saturday Weekly Tournament)
-Small Event Description - This will display a small sentence that provides a high level overview of the Event
-Event Highlight - This will display the type of event (Handicap Round, Doubles Best Throw, Raw Scores, Rated Round)
+## **Modal Home**
+-Photo - Hopefully a photo of people in prior events
+-Event Title - Includes day (Saturday Weekly Tournament)
+-Small Event Description - This will display a small sentence that provides a high level overview of the Event
+-Event Highlight - This will display the type of event (Handicap Round, Doubles Best Throw, Raw Scores, Rated Round)
 
 ## **Modal**
 Once the user clicks on the Event call to action it will display a more thorough events page that includes information:
 
-# **Event Title** 
-Title 
-Contact - Admin Information if they would like it to be displayed
-Day of the Week: Day or Days 
-Start Format - Shotgun, Flex
-Start Time : Specific time 
-Play Format - Singles / Doubles 
-Members - Total Number of members 
-Admins - Names of Admins 
+## **Event Title** 
+-Title 
+-Contact - Admin Information if they would like it to be displayed
+-Day of the Week: Day or Days 
+-Start Format - Shotgun, Flex
+-Start Time : Specific time 
+-Play Format - Singles / Doubles 
+-Members - Total Number of members 
+-Admins - Names of Admins 
 
-## Park/Course Reviews
+# Park/Course Reviews
 This will allow members (not non-members) to comment and rate the specific course 
 
-## Play Date
+# Play Date
 This section will allow members(not non-members) to post a specific time that day that they will be playing on a specific day so that other player can meet up with them. This is useful for tournaments in which a card of at least 3 people is needed in order to play. This is also useful for single players that want to expand their friendships within the community and want other to play with. 
 
-## Layout / Hole Page - wwww.chabotpark.com/:id
+
+# Layout / Hole Page - wwww.chabotpark.com/:id
 The layout page will be the most dynamic page of the entire website. I will contain the most in-depth view of each layout and specific hole. All the components will interact with each other so that it creates a congruent view in which viewers can encompasses all that the course has to offer. 
 
-### Layout Information
+## Layout Information
 This section will be spit up into two sections. The first section will display the all the layout information and the second section will contain the Google Maps API 
 
 -Layout
